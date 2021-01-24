@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo2';
+  autore = 'Giovanni';
+  somma (num1 : number , num2 : number) : number {
+    return num1 + num2;
+  }
+
+
 }
