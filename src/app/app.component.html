@@ -5,4 +5,12 @@
 <button (click)="increment()">+</button>
 <button (click)="decrement()">-</button>
 <div>Contatore è {{contatore > 5 ? "maggiore di 5 " : "minore/uguale a 5 "}} </div>
-
+<button [hidden]='url' (click)="loadImage()">Load Image</button>
+<button [hidden]='!url' (click)="unloadImage()">Unload Image</button>
+<div *ngIf = "url">
+<hr>
+<img [height]= "imageHeight" [src]="url">
+<hr>
+<button (click)="incrementImage()">+</button>
+<button (click)="decrementImage()">-</button>
+</div>
