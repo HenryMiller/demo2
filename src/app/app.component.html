@@ -1,3 +1,8 @@
 <h1>Hello {{autore}}</h1>
 <h2>{{somma(10,5)}}</h2>
+<h2 [class]="contatore < 0 ? 'red' : 'blue'">Contatore {{contatore}}</h2>
 <div>{{title}}</div>
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+<div>Contatore è {{contatore > 5 ? "maggiore di 5 " : "minore/uguale a 5 "}} </div>
+
