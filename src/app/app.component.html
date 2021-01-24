@@ -9,7 +9,7 @@
 <button [hidden]='!url' (click)="unloadImage()">Unload Image</button>
 <div *ngIf = "url">
 <hr>
-<img [height]= "imageHeight" [src]="url">
+<img *ngFor="let number of [1,2,3,4]" [height]= "imageHeight" [src]="url">
 <hr>
 <button (click)="incrementImage()">+</button>
 <button (click)="decrementImage()">-</button>
