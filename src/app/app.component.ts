@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root1',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -12,6 +12,12 @@ export class AppComponent {
   contatore = 0;
   url : string = null;
   imageHeight = 100;
+
+  users = {
+    name : 'Mr Darcy',
+    gender : 'F',
+    city : 'Treviso'
+  }
 
   somma (num1 : number , num2 : number) : number {
     return num1 + num2;
