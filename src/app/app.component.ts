@@ -35,7 +35,15 @@ export class AppComponent {
   unloadImage() : void {
     this.url = null;
   }
-  incrementImage () : void {
+  clickOnImage() : void {
+    alert('ciao');
+  }
+
+  onKeyUp(pdataDiNascita:string) : void {
+    this.autore = pdataDiNascita;
+
+  }
+  incrementImage (){
     this.imageHeight = this.imageHeight + 10;
   }
   decrementImage () : void {

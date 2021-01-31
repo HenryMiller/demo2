@@ -10,7 +10,10 @@
 <button [hidden]='!url' (click)="unloadImage()">Unload Image</button>
 <div *ngIf = "url">
 <hr>
-<img *ngFor="let number of [1,2,3,4]" [height]= "imageHeight" [src]="url">
+<img (click)="clickOnImage()"
+      *ngFor="let number of [1,2,3,4]"
+      [height]= "imageHeight"
+      [src]="url">
 <hr>
 <button (click)="incrementImage()">+</button>
 <button (click)="decrementImage()">-</button>
@@ -18,4 +21,7 @@
 <div></div>
 <a href="http://www.ospreys.it">Web site</a>
 <div></div>
-<input class="dataDiNascita" [value]='autore' #dataDiNascita>
+<input  class="cDataDiNascita"
+        (keyup)="onKeyUp(dataDiNascita.value)"
+        [value]='autore'
+        #dataDiNascita>
